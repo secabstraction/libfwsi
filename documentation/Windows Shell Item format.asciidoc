@@ -2483,6 +2483,29 @@ Contains a FILETIME
 The offset is relative from the start of the shell item.
 |===
 
+=== [[extension_block_0xbeef0026]]Extension block 0xbeef0026
+The extension block 0xbeef0026 is 38 bytes of size and consists of:
+
+[cols="1,1,1,5",options="header"]
+|===
+| Offset | Size | Value | Description
+| 0 | 2 | | Extension size +
+Includes the 2 bytes of the size itself
+| 2 | 2 | | Extension version +
+[yellow-background]*Seen 0x0001*
+| 4 | 4 | 0xbeef0026 | Extension signature
+| 8 | 4 | | [yellow-background]*Unknown* +
+[yellow-background]*Seen 0x00000016*
+| 12 | 8 | | [yellow-background]*Creation Time* +
+Contains a FILETIME
+| 20 | 8 | | [yellow-background]*Unknown* +
+Contains a FILETIME (Accessed Time?)
+| 28 | 8 | | [yellow-background]*Unknown* +
+Contains a FILETIME (Modified Time?)
+| 36 | 2 | | Extension offset +
+The offset is relative from the start of the shell item.
+|===
+
 == Windows definitions
 === [[file_attribute_flags]]File attribute flags
 The file attribute flags consist of the following values:
